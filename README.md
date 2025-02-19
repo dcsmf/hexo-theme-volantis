@@ -41,6 +41,9 @@ layout/_partial/article.ejs
   let pubTime = new Date(post.date);
   // 获取文章更新日期
   let lastUpdate = new Date(post.updated);
+  if(post.updated) {
+    lastUpdate = pubTime
+  }
   let currentDate = new Date();
   // 发布日期时间差
   let timeDifference = currentDate - pubTime;
